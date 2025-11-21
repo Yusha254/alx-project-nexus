@@ -7,8 +7,8 @@ interface HeroProps {
 
 export default function Hero({ onShopNow }: HeroProps) {
   return (
-    <div className="relative bg-gradient-to-br from-neutral-900 via-neutral-800 to-neutral-900 overflow-hidden">
-      <div className="absolute inset-0 opacity-20">
+    <div className="relative bg-linear-to-br from-neutral-900 via-neutral-800 to-neutral-900 overflow-hidden">
+      <div className="absolute inset-0 opacity-50">
         <ImageWithFallback
           src="https://images.unsplash.com/photo-1758522484646-c8694d1784fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBzaG9wcGluZyUyMGVjb21tZXJjZXxlbnwxfHx8fDE3NjM1MTIxNTB8MA&ixlib=rb-4.1.0&q=80&w=1080"
           alt="Shopping hero"
@@ -16,7 +16,7 @@ export default function Hero({ onShopNow }: HeroProps) {
         />
       </div>
       
-      <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/90 to-neutral-900/50" />
+      <div className="absolute inset-0 bg-linear-to-r from-neutral-900/90 to-neutral-900/50" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
         <div className="max-w-2xl">
@@ -65,7 +65,7 @@ export default function Hero({ onShopNow }: HeroProps) {
         </div>
       </div>
       
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-neutral-50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-neutral-50 to-transparent" />
     </div>
   );
 }

@@ -20,6 +20,7 @@ export function ProductCard({ product, onClick, onAddToCart }: ProductCardProps)
           src={product.product_photo}
           alt={product.product_title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+          loading='lazy'
         />
 
         {hasDiscount && (
@@ -42,12 +43,26 @@ export function ProductCard({ product, onClick, onAddToCart }: ProductCardProps)
         </h3>
 
         <div className="flex items-center gap-2 mb-3">
-          <div className="flex items-center gap-1">
-            <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
-            <span className="text-neutral-900">{product.product_star_rating}</span>
-          </div>
-          <span className="text-neutral-400">·</span>
-          <span className="text-neutral-600">{product.product_num_ratings.toLocaleString()} reviews</span>
+            <div className="flex items-center gap-1">
+                <Star
+                    className={`w-4 h-4 ${
+                        (product.product_num_ratings ?? 0) > 0
+                            ? "text-amber-400 fill-amber-400"
+                            : "text-neutral-400 fill-neutral-400"
+                    }`}
+            />
+<span className="text-neutral-900">
+  {product.product_star_rating && product.product_star_rating !== "null"
+    ? product.product_star_rating
+    : "0"}
+</span>
+
+
+            </div>
+            <span className="text-neutral-400">·</span>
+            <span className="text-neutral-600">
+                {(product.product_num_ratings ?? 0).toLocaleString()} reviews
+            </span>
         </div>
 
         <div className="flex items-baseline gap-2 mb-4">

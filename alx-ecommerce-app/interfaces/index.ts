@@ -65,3 +65,21 @@ export interface ProductCardProps {
   onClick: () => void;
   onAddToCart: (e: React.MouseEvent) => void;
 }
+
+export interface FiltersProps {
+  priceRange: [number, number];
+  onPriceRangeChange: (range: [number, number]) => void;
+  sortBy: string;
+  onSortByChange: (sort: string) => void;
+}
+
+export interface CategoryNavProps {
+  selectedCategory?: string;
+  onCategorySelect: (categoryId: string) => void;
+}
+
+export interface PaginationProps {
+  currentPage: number;
+  totalPages: number;
+  onPageChange: (page: number) => void;
+}
