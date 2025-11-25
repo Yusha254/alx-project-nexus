@@ -7,7 +7,7 @@ export function ProductGrid({
   products,
   onProductClick,
   onAddToCart,
-  loading = false,
+  loading = true,
 }: ProductGridProps) {
   if (loading) {
     return (

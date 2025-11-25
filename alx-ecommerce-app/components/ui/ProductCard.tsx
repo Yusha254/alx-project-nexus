@@ -3,7 +3,7 @@ import { ImageWithFallback } from '@/components/ui/ImageWithFallback';
 import { ProductCardProps } from '@/interfaces';
 
 export function ProductCard({ product, onClick, onAddToCart }: ProductCardProps) {
-  const hasDiscount = !!product.product_original_price;
+  const hasDiscount = !!product.price;
 
   const handleAddToCart = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -17,8 +17,8 @@ export function ProductCard({ product, onClick, onAddToCart }: ProductCardProps)
     >
       <div className="relative aspect-square overflow-hidden bg-neutral-50">
         <ImageWithFallback
-          src={product.product_photo}
-          alt={product.product_title}
+          src={product.image?? ""}
+          alt={product.title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           loading='lazy'
         />
@@ -29,7 +29,7 @@ export function ProductCard({ product, onClick, onAddToCart }: ProductCardProps)
           </div>
         )}
 
-        {product.is_prime && (
+        {product.isPrime && (
           <div className="absolute top-3 right-3 bg-blue-500 text-white px-2 py-1 rounded-md flex items-center gap-1">
             <Zap className="w-3 h-3 fill-current" />
             <span className="text-xs">Prime</span>
@@ -39,21 +39,21 @@ export function ProductCard({ product, onClick, onAddToCart }: ProductCardProps)
 
       <div className="p-4">
         <h3 className="text-neutral-900 mb-2 line-clamp-2 group-hover:text-neutral-600 transition-colors">
-          {product.product_title}
+          {product.title}
         </h3>
 
         <div className="flex items-center gap-2 mb-3">
             <div className="flex items-center gap-1">
                 <Star
                     className={`w-4 h-4 ${
-                        (product.product_num_ratings ?? 0) > 0
+                        (product.ratingCount ?? 0) > 0
                             ? "text-amber-400 fill-amber-400"
                             : "text-neutral-400 fill-neutral-400"
                     }`}
             />
 <span className="text-neutral-900">
-  {product.product_star_rating && product.product_star_rating !== "null"
-    ? product.product_star_rating
+  {product.rating && product.rating !== null
+    ? product.rating
     : "0"}
 </span>
 
@@ -61,14 +61,14 @@ export function ProductCard({ product, onClick, onAddToCart }: ProductCardProps)
             </div>
             <span className="text-neutral-400">·</span>
             <span className="text-neutral-600">
-                {(product.product_num_ratings ?? 0).toLocaleString()} reviews
+                {(product.ratingCount ?? 0).toLocaleString()} reviews
             </span>
         </div>
 
         <div className="flex items-baseline gap-2 mb-4">
-          <span className="text-neutral-900">{product.product_price}</span>
-          {product.product_original_price && (
-            <span className="text-neutral-400 line-through">{product.product_original_price}</span>
+          <span className="text-neutral-900">{product.price}</span>
+          {product.originalPrice && (
+            <span className="text-neutral-400 line-through">{product.originalPrice}</span>
           )}
         </div>
 

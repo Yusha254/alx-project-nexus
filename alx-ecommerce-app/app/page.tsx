@@ -2,84 +2,97 @@
 
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
-import type { Product } from "@/interfaces";
-import { data as MOCK_PRODUCTS } from "@/data/index";
+import type { UnifiedProduct } from "@/interfaces";
+import { fetchProducts, fetchProductDetails } from "@/data/index";
 import { Header } from "@/components/common/Header";
 import Hero from "@/components/common/Hero";
 import { ProductGrid } from "@/components/common/ProductGrid";
 import { Filters } from "@/components/common/Filters";
 import { CategoryNav } from "@/components/common/CategoryNav";
+import { Pagination } from "@/components/ui/Pagination";
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState("");
   const [cartCount, setCartCount] = useState(0);
-  const [products, setProducts] = useState<Product[]>([]);
-
-  // KEEP ONLY PRICE + SORT
+  const [products, setProducts] = useState<UnifiedProduct[]>([]);
+  const [selectedCategory, setSelectedCategory] = useState<string | undefined>();
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 200]);
   const [sortBy, setSortBy] = useState("featured");
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const PAGE_SIZE = 20;
 
   const router = useRouter();
 
   useEffect(() => {
-    const normalizedProducts: Product[] = MOCK_PRODUCTS.products.map((p) => ({
-      ...p,
-      product_star_rating: p.product_star_rating
-        ? String(p.product_star_rating)
-        : "0",
-    }));
+    async function load() {
+      const response = await fetchProducts("Nike Backpack")
+      console.log("🔵 RAW SEARCH API RESPONSE:");
+      console.log(JSON.stringify(response, null, 2));
+    }
 
-    setProducts(normalizedProducts);
-  }, []);
+    load()
+  }, [])
 
-  // NEW: filtered products (without category filter)
+  // ——————————————————————————————————
+  // FILTER + SORT (pre-pagination)
+  // ——————————————————————————————————
   const filteredProducts = products
-    .filter((p) =>
-      p.product_title.toLowerCase().includes(searchQuery.toLowerCase())
-    )
-    .filter((p) => {
-      const price = Number(p.product_price) || 0;
-      return price >= priceRange[0] && price <= priceRange[1];
-    })
-    .sort((a, b) => {
-      switch (sortBy) {
-        case "price-low":
-          return (
-            (Number(a.product_price) || 0) -
-            (Number(b.product_price) || 0)
-          );
-        case "price-high":
-          return (
-            (Number(b.product_price) || 0) -
-            (Number(a.product_price) || 0)
-          );
-        case "rating":
-          return (
-            Number(b.product_star_rating || 0) -
-            Number(a.product_star_rating || 0)
-          );
-        case "reviews":
-          return (
-            (b.product_num_ratings || 0) -
-            (a.product_num_ratings || 0)
-          );
-        default:
-          return 0;
-      }
-    });
+  .filter((p) => {
+    if (!selectedCategory) return true;
+    return p.title.toLowerCase().includes(selectedCategory);
+  })
+  .filter((p) => p.title.toLowerCase().includes(searchQuery.toLowerCase()))
+  .filter((p) => {
+    const price = Number(p.price) || 0;
+    return price >= priceRange[0] && price <= priceRange[1];
+  })
+  .sort((a, b) => {
+    switch (sortBy) {
+      case "price-low":
+        return (Number(a.price) || 0) - (Number(b.price) || 0);
+      case "price-high":
+        return (Number(b.price) || 0) - (Number(a.price) || 0);
+      case "rating":
+        return (a.rating || 0) - (b.rating || 0);
+      case "reviews":
+        return (a.ratingCount || 0) - (b.ratingCount || 0);
+      default:
+        return 0;
+    }
+  });
 
-  const handleProductClick = (product: Product) => {
-    console.log("Clicked product", product.asin);
-  };
+  // ——————————————————————————————————
+  // PAGINATION LOGIC
+  // ——————————————————————————————————
+  const totalPages = Math.ceil(filteredProducts.length / PAGE_SIZE);
 
-  const handleAddToCart = (product: Product) => {
+  const paginatedProducts = filteredProducts.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE
+  );
+
+  // Reset page when filters change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, priceRange, sortBy, selectedCategory]);
+
+  const handleProductClick = async (product: UnifiedProduct) => {
+    const details = await fetchProductDetails(product.asin);
+    console.log("Normalized product details:", details);
+    router.push(`/product/${product.asin}`); // we'll build this next
+};
+
+
+  const handleAddToCart = (product: UnifiedProduct) => {
     console.log("Add to cart", product.asin);
     setCartCount((prev) => prev + 1);
   };
 
   const handleCategorySelect = (categoryId: string) => {
     console.log("Selected category", categoryId);
-  }
+    setSelectedCategory(categoryId);
+  };
 
   return (
     <div className="min-h-screen bg-neutral-50">
@@ -89,7 +102,6 @@ export default function Home() {
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
       />
-
       <Hero
         onShopNow={() => {
           document
@@ -97,13 +109,15 @@ export default function Home() {
             ?.scrollIntoView({ behavior: "smooth" });
         }}
       />
-      <CategoryNav onCategorySelect={handleCategorySelect} />
-
+      <CategoryNav
+        selectedCategory={selectedCategory}
+        onCategorySelect={handleCategorySelect}
+      />
       <div
         id="products-section"
         className="mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row gap-8"
       >
-        {/* Filters Sidebar */}
+        {/* Filters */}
         <aside className="lg:w-64 shrink-0">
           <Filters
             priceRange={priceRange}
@@ -112,8 +126,7 @@ export default function Home() {
             onSortByChange={setSortBy}
           />
         </aside>
-
-        {/* Product Grid */}
+        {/* Products + Pagination */}
         <main className="flex-1">
           <div className="mb-6">
             <h1 className="text-neutral-900 mb-2">All Products</h1>
@@ -123,12 +136,16 @@ export default function Home() {
               {searchQuery && ` for "${searchQuery}"`}
             </p>
           </div>
-
           <ProductGrid
-            products={filteredProducts}
+            products={paginatedProducts}
             onProductClick={handleProductClick}
             onAddToCart={handleAddToCart}
             loading={false}
+          />
+          <Pagination
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
           />
         </main>
       </div>

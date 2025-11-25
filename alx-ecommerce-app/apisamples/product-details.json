@@ -1,0 +1,702 @@
+{
+  "status": "OK",
+  "request_id": "9930491e-95de-4601-8570-d4e4a238f40c",
+  "parameters": {
+    "asin": "B0DYL5M84X",
+    "country": "US",
+    "language": "en_US"
+  },
+  "data": {
+    "asin": "B0DYL5M84X",
+    "product_title": "Nike Varsity Elite Backpack (32L), Black/Black/Metallic Silver, One Size",
+    "product_price": "88.00",
+    "product_original_price": null,
+    "minimum_order_quantity": null,
+    "currency": "USD",
+    "country": "US",
+    "product_byline": "Brand: Nike",
+    "product_byline_link": "https://www.amazon.com/Nike/b/ref=bl_dp_s_web_119088564011?ie=UTF8&node=119088564011&field-lbr_brands_browse-bin=Nike",
+    "product_byline_links": [
+      "https://www.amazon.com/Nike/b/ref=bl_dp_s_web_119088564011?ie=UTF8&node=119088564011&field-lbr_brands_browse-bin=Nike"
+    ],
+    "product_star_rating": "4.8",
+    "product_num_ratings": 2370,
+    "product_url": "https://www.amazon.com/dp/B0DYL5M84X",
+    "product_slug": "Nike-Varsity-Backpack-Metallic-Silver",
+    "product_photo": "https://m.media-amazon.com/images/I/71VULg0thJL._AC_SL1500_.jpg",
+    "product_num_offers": 19,
+    "product_availability": "In Stock",
+    "product_condition": "",
+    "is_best_seller": false,
+    "is_amazon_choice": false,
+    "is_prime": false,
+    "climate_pledge_friendly": false,
+    "sales_volume": "3K+ bought in past month",
+    "about_product": [
+      "Expandable side pocket"
+    ],
+    "product_description": "The Varsity Elite backpack holds everything you need to hoop. A large main compartment fits up to a full-size basketball. Exterior front pocket allows quick access to small items and a bottom pocket keeps sweaty clothes and dirty shoes separate. A trolley sleeve allows you to attach it to your luggage when traveling for those away games.",
+    "product_information": {
+      "Product Dimensions": "9 x 12 x 19 inches",
+      "Item Weight": "1.7 Pounds",
+      "Department": "unisex-adult",
+      "Manufacturer": "Nike",
+      "Language": "English",
+      "ASIN": "B0DYL5M84X",
+      "Item model number": "HM9965-010",
+      "Best Sellers Rank": "#887 in Sports & Outdoors (See Top 100 in Sports & Outdoors)  #2 in Basketball Equipment Bags",
+      "Age Range Description": "Adult",
+      "Number Of Items": "1",
+      "Units": "1 Ounce",
+      "Capacity Total": "32 Liters"
+    },
+    "rating_distribution": {
+      "1": 2,
+      "2": 0,
+      "3": 2,
+      "4": 8,
+      "5": 88
+    },
+    "product_photos": [
+      "https://m.media-amazon.com/images/I/71VULg0thJL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71mXxeruyqL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/71i2cZIwopL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/61beEl0T1nL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81c4jtlCf6L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81j+kn+LCBL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/717zDAPmY+L._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/818vpzu8BgL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/817StYMl-wL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/81TukqPuL7L._AC_SL1500_.jpg"
+    ],
+    "product_videos": [],
+    "user_uploaded_videos": [],
+    "has_video": false,
+    "product_details": {},
+    "customers_say": "Customers find this basketball backpack roomy with a 32L capacity perfect for daily use, and appreciate its durability, with one customer noting it's still going strong after three basketball seasons. The bag features side mesh pockets for water bottles and good organization, and customers find it worth the price. They like its fit, noting it can hold a lot of weight and easily accommodate a basketball, while also appreciating its stylish appearance.",
+    "top_reviews": [
+      {
+        "review_id": "R3970S7X38PMT7",
+        "review_title": "Classic and great bag for everyday use",
+        "review_comment": "Bought this for my brother for school. The 32L makes it very spacious and roomy to hold books, a laptop, clothes, water and more. It feels very durable, high quality and is water resistant. The straps are padded which add more comfortability and it has multiple compartments allowing vast organization. I am really fond of the color-way and the overall style of the bag. I would recommend this to anyone looking for a reliable everyday bag.",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R3970S7X38PMT7",
+        "review_author_id": "AGC6QXQZFK6LCPNFKFGESS7QHXEQ",
+        "review_author": "Shadman",
+        "review_author_url": "https://www.amazon.com/gp/profile/amzn1.account.AGC6QXQZFK6LCPNFKFGESS7QHXEQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "review_images": [
+          "https://m.media-amazon.com/images/I/71Rl144LDgL.jpg",
+          "https://m.media-amazon.com/images/I/71VgOAigQjL.jpg",
+          "https://m.media-amazon.com/images/I/71IcsX9Sh6L.jpg",
+          "https://m.media-amazon.com/images/I/71WZ8IqmW1L.jpg"
+        ],
+        "review_video": null,
+        "review_date": "Reviewed in the United States on September 13, 2025",
+        "is_verified_purchase": true,
+        "helpful_vote_statement": "3 people found this helpful",
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Iron Grey/Black/Black"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R2ZRO5K1RYNJRQ",
+        "review_title": "Very good quality",
+        "review_comment": "Durable, Spacious, and Sleek Design I’ve been using the Nike Varsity Elite Backpack for a few weeks now, and it’s exceeded my expectations. The 32L capacity is perfect for daily use—whether for school, work, or gym gear. Design & Style: The Iron Grey/Black color combo is sleek and modern, with a sporty edge that matches almost any outfit. The minimalist Nike branding adds a nice touch without being too flashy. Storage & Organization: It has plenty of compartments, including a padded laptop sleeve, front zip pocket, and side mesh pockets for water bottles. Everything stays organized and easy to access.",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R2ZRO5K1RYNJRQ",
+        "review_author_id": "AEX3GJVUP25BL4LBBWDEWPDLPXMA",
+        "review_author": "Greidy Rojas",
+        "review_author_url": "https://www.amazon.com/gp/profile/amzn1.account.AEX3GJVUP25BL4LBBWDEWPDLPXMA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in the United States on November 19, 2025",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Iron Grey/Black/Black"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R3KZURX6BU1L5N",
+        "review_title": "Good and reliable",
+        "review_comment": "Spacious and good for sports,school and comfortable",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R3KZURX6BU1L5N",
+        "review_author_id": "AELTT6XZZ2SWQDVBAX6FHM3Z5ABA",
+        "review_author": "angie",
+        "review_author_url": "https://www.amazon.com/gp/profile/amzn1.account.AELTT6XZZ2SWQDVBAX6FHM3Z5ABA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/1748c690-4ca2-496d-b226-01844402b32d._CR0%2C0%2C500%2C500_SX460_.jpeg",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in the United States on November 22, 2025",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Black/Black/Metallic Silver"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R19DHAZI4ZX4CX",
+        "review_title": "Amazing Product. Satisfied Customer.",
+        "review_comment": "Really big bag. My son loved it. Value for money. Quality. Perfect size.",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R19DHAZI4ZX4CX",
+        "review_author_id": "AF7CV6C5EP6Q7RUFWJBEJFD6NTEA",
+        "review_author": "empressVIAA",
+        "review_author_url": "https://www.amazon.com/gp/profile/amzn1.account.AF7CV6C5EP6Q7RUFWJBEJFD6NTEA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/4c455172-e958-42a9-8c02-08394ab3e104._CR64%2C0%2C169%2C169_UX460_.jpg",
+        "review_images": [
+          "https://m.media-amazon.com/images/I/71WhGA2j6mL.jpg"
+        ],
+        "review_video": null,
+        "review_date": "Reviewed in the United States on November 14, 2025",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "University Red/Black/Black"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R1LRWL0TSLGE7R",
+        "review_title": "Worth it",
+        "review_comment": "Great for sports equipment on the bottom and school books in main compartment. No need for two bags. Great quality",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R1LRWL0TSLGE7R",
+        "review_author_id": "AG4IKJZBIC3WF5T4Y6P4HYDAQLTA",
+        "review_author": "JL",
+        "review_author_url": "https://www.amazon.com/gp/profile/amzn1.account.AG4IKJZBIC3WF5T4Y6P4HYDAQLTA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/d0869851-78fe-4100-9fe7-149edf11e0a8._CR113%2C0%2C273%2C273_SX460_.jpg",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in the United States on November 10, 2025",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Black/Black/Metallic Silver"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R506UIMRF1VJI",
+        "review_title": "Great bag pretty big size",
+        "review_comment": "Great bag but showed up with dirty marks they came out with a little clean",
+        "review_star_rating": "4",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R506UIMRF1VJI",
+        "review_author_id": "AGZCWT6GCMJOCLKP7XBJVI3HFJ4Q",
+        "review_author": "Kathryn",
+        "review_author_url": "https://www.amazon.com/gp/profile/amzn1.account.AGZCWT6GCMJOCLKP7XBJVI3HFJ4Q/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in the United States on September 13, 2025",
+        "is_verified_purchase": true,
+        "helpful_vote_statement": "2 people found this helpful",
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "White/Black/Metallic Gold"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R1J27FX7927KH2",
+        "review_title": "Very nice durable bag",
+        "review_comment": "Bought this for my grandson for his birthday and he absolutely loved it. He loves the design of it with all the pockets and the storage capacity. I was impressed with the durability of it, and the color is a very nice rich black.",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R1J27FX7927KH2",
+        "review_author_id": "AFDHCUMHYUWEQ5BAW2OUTGOWTCEQ",
+        "review_author": "nelson",
+        "review_author_url": "https://www.amazon.com/gp/profile/amzn1.account.AFDHCUMHYUWEQ5BAW2OUTGOWTCEQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in the United States on October 20, 2025",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Black/Black/Metallic Silver"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R2O3JPZZR9HK7V",
+        "review_title": "Good purchase",
+        "review_comment": "Great quality and lots of pockets",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R2O3JPZZR9HK7V",
+        "review_author_id": "AGHJLM3F3MZHNGDHS3M3B7CMIKZQ",
+        "review_author": "Maria",
+        "review_author_url": "https://www.amazon.com/gp/profile/amzn1.account.AGHJLM3F3MZHNGDHS3M3B7CMIKZQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/12d9f0f3-6ddb-4619-ac15-ed13f11266bf._CR187%2C0%2C1125%2C1125_SX460_.jpg",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in the United States on November 22, 2025",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Black/Black/Metallic Silver"
+        },
+        "is_vine": false
+      }
+    ],
+    "top_reviews_global": [
+      {
+        "review_id": "R1B6VGPPF7AW0X",
+        "review_title": "Mochila espaciosa",
+        "review_comment": "Es muy espaciosa. Muchos compartimientos para dejar todo. No es una mochila al uso. Indicada para entrenamientos",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R1B6VGPPF7AW0X",
+        "review_author_id": null,
+        "review_author": "Antonio R",
+        "review_author_url": null,
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in Spain on July 9, 2019",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Black/Metallic Cool Grey"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R1GRTZYFNKS0YY",
+        "review_title": "This bag was big enough for school work and basketball kit",
+        "review_comment": "My son needed a bigger bag for school and basketball this was perfect",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R1GRTZYFNKS0YY",
+        "review_author_id": null,
+        "review_author": "Kelly Wood",
+        "review_author_url": null,
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in the United Kingdom on April 8, 2019",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Black/Metallic Cool Grey"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R1H1ADAX7SXY6H",
+        "review_title": "Sac de qualité",
+        "review_comment": "Bon format avec beaucoup d'espace.",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R1H1ADAX7SXY6H",
+        "review_author_id": null,
+        "review_author": "Amazon Customer",
+        "review_author_url": null,
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in Canada on January 31, 2025",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Black/Metallic Cool Grey"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R1RS6DNOI6ZM5Z",
+        "review_title": "Mochila resistente y duradera",
+        "review_comment": "Una mochila de muy buena calidad",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R1RS6DNOI6ZM5Z",
+        "review_author_id": null,
+        "review_author": "Gilberto",
+        "review_author_url": null,
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in Mexico on November 1, 2025",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Black/Black/Metallic Silver"
+        },
+        "is_vine": false
+      },
+      {
+        "review_id": "R2JWC0JAVKYEI4",
+        "review_title": "You get what you see on ad.",
+        "review_comment": "My brother love it so much. So perfect for its purpose.",
+        "review_star_rating": "5",
+        "review_link": "https://www.amazon.com/gp/customer-reviews/R2JWC0JAVKYEI4",
+        "review_author_id": null,
+        "review_author": "Dee",
+        "review_author_url": null,
+        "review_author_avatar": "https://m.media-amazon.com/images/S/amazon-avatars-global/default.png",
+        "review_images": [],
+        "review_video": null,
+        "review_date": "Reviewed in Japan on December 29, 2018",
+        "is_verified_purchase": true,
+        "reviewed_product_asin": "B0DYL5M84X",
+        "reviewed_product_variant": {
+          "Size": "One Size",
+          "Color": "Black/Metallic Cool Grey"
+        },
+        "is_vine": false
+      }
+    ],
+    "delivery": "FREE delivery Saturday, November 29. Details Or fastest delivery Tomorrow, November 26. Order within 4 hrs 1 min. Details",
+    "primary_delivery_time": "Saturday, November 29",
+    "category": {
+      "id": "aps",
+      "name": "All Departments"
+    },
+    "category_path": [
+      {
+        "id": "3375251",
+        "name": "Sports & Outdoors",
+        "link": "https://www.amazon.com/sports-outdoors/b/ref=dp_bc_1?ie=UTF8&node=3375251"
+      },
+      {
+        "id": "10971181011",
+        "name": "Sports",
+        "link": "https://www.amazon.com/Sports-Fitness/b/ref=dp_bc_2?ie=UTF8&node=10971181011"
+      },
+      {
+        "id": "706809011",
+        "name": "Team Sports",
+        "link": "https://www.amazon.com/team-sports/b/ref=dp_bc_3?ie=UTF8&node=706809011"
+      },
+      {
+        "id": "3396541",
+        "name": "Basketball",
+        "link": "https://www.amazon.com/basketball-hoop-basketball-hoops/b/ref=dp_bc_4?ie=UTF8&node=3396541"
+      },
+      {
+        "id": "5680923011",
+        "name": "Accessories",
+        "link": "https://www.amazon.com/Basketball-Equipment-Accessories/b/ref=dp_bc_5?ie=UTF8&node=5680923011"
+      },
+      {
+        "id": "1240798011",
+        "name": "Equipment Bags",
+        "link": "https://www.amazon.com/Basketball-Equipment-Bags/b/ref=dp_bc_6?ie=UTF8&node=1240798011"
+      }
+    ],
+    "product_variations_dimensions": [
+      "size",
+      "color"
+    ],
+    "product_variations": {
+      "color": [
+        {
+          "asin": "B0DYL5M84X",
+          "value": "Black/Black/Metallic Silver",
+          "photo": "https://m.media-amazon.com/images/I/31tbBEhpMnL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0FNC9XFWH",
+          "value": "Red-black",
+          "photo": "https://m.media-amazon.com/images/I/41apOfps65L.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0FHD8JHP6",
+          "value": "University Red/Black/Black",
+          "photo": "https://m.media-amazon.com/images/I/31eQuGfwWxL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0DRNMGWPQ",
+          "value": "Anthracite/Black/White",
+          "photo": "https://m.media-amazon.com/images/I/413zqC2o5WL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B079ZBFBTM",
+          "value": "Black/Metallic Cool Grey",
+          "photo": "https://m.media-amazon.com/images/I/41uNxPovUxL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0DS994CY1",
+          "value": "Blue",
+          "photo": "https://m.media-amazon.com/images/I/51cESIfGPlL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0FD93L19S",
+          "value": "Gold/White",
+          "photo": "https://m.media-amazon.com/images/I/3122VJ6T4zL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0FRDBTHD9",
+          "value": "Hyper Turquoise/Black/Hyper Royal",
+          "photo": "https://m.media-amazon.com/images/I/31rtLiXZ7aL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0DYL6MSVL",
+          "value": "Iron Grey/Black/Black",
+          "photo": "https://m.media-amazon.com/images/I/31WociXvFXL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0FRCVSMRT",
+          "value": "Light Magenta/Black/Light Photo Blue",
+          "photo": "https://m.media-amazon.com/images/I/31fUKPPSegL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0DC5PTP5C",
+          "value": "Multicolor",
+          "photo": "https://m.media-amazon.com/images/I/31j3gi3maTL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0FRZRFB3R",
+          "value": "Pinkpopsicle/Black",
+          "photo": "https://m.media-amazon.com/images/I/513c5YCA8iL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0FRCVRKNH",
+          "value": "Safety Orange/Black/Wolf Grey",
+          "photo": "https://m.media-amazon.com/images/I/31vZYaaJMpL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0F9LRK6SS",
+          "value": "White/Black/Metallic Gold",
+          "photo": "https://m.media-amazon.com/images/I/41yq3de4C6L.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0FHD866PT",
+          "value": "Game Royal/Black/White",
+          "photo": "https://m.media-amazon.com/images/I/51MmukySMAL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0DQVKCVRT",
+          "value": "Gray / Black",
+          "photo": "https://m.media-amazon.com/images/I/41WC3G5P6iL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0DBDLPR7X",
+          "value": "Star Blue/Aquarius Blue",
+          "photo": "https://m.media-amazon.com/images/I/41XIqUuuxJL.jpg",
+          "is_available": true
+        },
+        {
+          "asin": "B0DBXM7H2H",
+          "value": "Charcoalgreen",
+          "photo": "https://m.media-amazon.com/images/I/41hUEf50a8L.jpg",
+          "is_available": false
+        },
+        {
+          "asin": "B0DB6JLQFL",
+          "value": "Cloud/White/Yellow",
+          "photo": "https://m.media-amazon.com/images/I/31ylCrAbfFL.jpg",
+          "is_available": false
+        },
+        {
+          "asin": "B0FF3PB8ZJ",
+          "value": "Nikelogo/Blue/Black",
+          "photo": "https://m.media-amazon.com/images/I/41kMCxajNjL.jpg",
+          "is_available": false
+        },
+        {
+          "asin": "B0FJ7DDPPQ",
+          "value": "Pink/Purple",
+          "photo": "https://m.media-amazon.com/images/I/41G6c9t4s7L.jpg",
+          "is_available": false
+        },
+        {
+          "asin": "B0D8VMZT4D",
+          "value": "Popsiclepink/Black",
+          "photo": "https://m.media-amazon.com/images/I/51kAEodOdoL.jpg",
+          "is_available": false
+        },
+        {
+          "asin": "B0DYZVF6Q4",
+          "value": "University Red/Black/Sail",
+          "photo": "https://m.media-amazon.com/images/I/31wrv6pEPNL.jpg",
+          "is_available": false
+        },
+        {
+          "asin": "B0C53VKTN9",
+          "value": "White",
+          "photo": "https://m.media-amazon.com/images/I/311D24ODy5L.jpg",
+          "is_available": false
+        }
+      ],
+      "size": [
+        {
+          "asin": "B0DYL5M84X",
+          "value": "One Size",
+          "is_available": true
+        },
+        {
+          "asin": "B0DYZVF6Q4",
+          "value": "Small",
+          "is_available": false
+        },
+        {
+          "asin": "B0C53VKTN9",
+          "value": "Medium",
+          "is_available": false
+        },
+        {
+          "asin": "B0DBXM7H2H",
+          "value": "12.0 x 6.0 x 2.0 inches",
+          "is_available": false
+        },
+        {
+          "asin": "B0DB6JLQFL",
+          "value": "18.9\" x 11\" x 9.1\"",
+          "is_available": false
+        },
+        {
+          "asin": "B0FJ7DDPPQ",
+          "value": "32L",
+          "is_available": false
+        }
+      ]
+    },
+    "all_product_variations": {
+      "B0FRZRFB3R": {
+        "size": "One Size",
+        "color": "Pinkpopsicle/Black"
+      },
+      "B0DB6JLQFL": {
+        "size": "18.9\" x 11\" x 9.1\"",
+        "color": "Cloud/White/Yellow"
+      },
+      "B0F9LRK6SS": {
+        "size": "One Size",
+        "color": "White/Black/Metallic Gold"
+      },
+      "B0DYL6MSVL": {
+        "size": "One Size",
+        "color": "Iron Grey/Black/Black"
+      },
+      "B0FRCVSMRT": {
+        "size": "One Size",
+        "color": "Light Magenta/Black/Light Photo Blue"
+      },
+      "B0DYL5M84X": {
+        "size": "One Size",
+        "color": "Black/Black/Metallic Silver"
+      },
+      "B0DC5PTP5C": {
+        "size": "One Size",
+        "color": "Multicolor"
+      },
+      "B0FHD866PT": {
+        "size": "One Size",
+        "color": "Game Royal/Black/White"
+      },
+      "B0FF3PB8ZJ": {
+        "size": "Medium",
+        "color": "Nikelogo/Blue/Black"
+      },
+      "B0DRNMGWPQ": {
+        "size": "One Size",
+        "color": "Anthracite/Black/White"
+      },
+      "B0FRDBTHD9": {
+        "size": "One Size",
+        "color": "Hyper Turquoise/Black/Hyper Royal"
+      },
+      "B0DQVKCVRT": {
+        "size": "One Size",
+        "color": "Gray / Black"
+      },
+      "B0FRCVRKNH": {
+        "size": "One Size",
+        "color": "Safety Orange/Black/Wolf Grey"
+      },
+      "B0FHD8JHP6": {
+        "size": "One Size",
+        "color": "University Red/Black/Black"
+      },
+      "B0FJ7DDPPQ": {
+        "size": "32L",
+        "color": "Pink/Purple"
+      },
+      "B0FD93L19S": {
+        "size": "One Size",
+        "color": "Gold/White"
+      },
+      "B079ZBFBTM": {
+        "size": "One Size",
+        "color": "Black/Metallic Cool Grey"
+      },
+      "B0C53VKTN9": {
+        "size": "Medium",
+        "color": "White"
+      },
+      "B0FNC9XFWH": {
+        "size": "One Size",
+        "color": "Red-black"
+      },
+      "B0DBXM7H2H": {
+        "size": "12.0 x 6.0 x 2.0 inches",
+        "color": "Charcoalgreen"
+      },
+      "B0DBDLPR7X": {
+        "size": "One Size",
+        "color": "Star Blue/Aquarius Blue"
+      },
+      "B0D8VMZT4D": {
+        "size": "32L",
+        "color": "Popsiclepink/Black"
+      },
+      "B0DS994CY1": {
+        "size": "One Size",
+        "color": "Blue"
+      },
+      "B0DYZVF6Q4": {
+        "size": "Small",
+        "color": "University Red/Black/Sail"
+      }
+    },
+    "has_aplus": false,
+    "aplus_images": [],
+    "has_brandstory": false,
+    "frequently_bought_together": [
+      {
+        "product_title": "This item:  Nike Varsity Elite Backpack (32L), Black/Black/Metallic Silver, One Size",
+        "product_price": "$90.00",
+        "product_photo": "https://images-na.ssl-images-amazon.com/images/I/71VULg0thJL.jpg"
+      },
+      {
+        "product_title": "WILSON Evolution Indoor Game Basketballs - Size 5, Size 6 and Size 7",
+        "product_price": "$79.94",
+        "product_url": "https://www.amazon.com/dp/B0009KMXWY",
+        "product_photo": "https://images-na.ssl-images-amazon.com/images/I/91ErTRDixvL.jpg"
+      }
+    ],
+    "landing_asin": "B0DYL5M84X",
+    "parent_asin": "B0FPRMXPGQ"
+  }
+}
