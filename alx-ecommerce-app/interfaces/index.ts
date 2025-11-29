@@ -46,7 +46,7 @@ export interface ProductSearchData {
   total_products: number;
   country: string;
   domain: string;
-  products: Product[];
+  products: UnifiedProduct[];
 }
 
 export interface ProductSearchResponse {
@@ -129,6 +129,13 @@ export interface HeaderProps {
   onSearchChange: (query: string) => void;
 }
 
+export interface CartProps {
+  isOpen: boolean;
+  onClose: () => void;
+  items: Array<UnifiedProduct & { quantity: number }>;
+  onUpdateQuantity: (asin: string, quantity: number) => void;
+}
+
 export interface ProductGridProps {
   products: UnifiedProduct[];
   onProductClick: (product: UnifiedProduct) => void;
@@ -140,6 +147,30 @@ export interface ProductCardProps {
   product: UnifiedProduct;
   onClick: () => void;
   onAddToCart: (e: React.MouseEvent) => void;
+}
+
+export interface ProductActionsProps {
+  price: number;
+  originalPrice?: number;
+  discount?: number;
+  inStock?: boolean;
+  onAddToCart: (quantity: number) => void;
+}
+
+export interface ProductImagesProps {
+  images: string[];
+  discount?: number;
+  isPrime?: boolean;
+  title: string;
+}
+
+export interface ProductRatingProps {
+  rating: number;
+  reviewCount: number;
+}
+
+export interface ProductDetailsPageProps {
+  params: { asin: string } | Promise<{ asin: string }>;
 }
 
 export interface FiltersProps {
@@ -161,17 +192,13 @@ export interface PaginationProps {
 }
 
 export interface ProductDetailsProps {
-  productDetail: UnifiedProduct;
-  onBack: () => void;
-  onAddToCart: (product: UnifiedProduct) => void;
+  product: UnifiedProduct;
 }
 
 
 // ─────────────────────────────────────────────
-//  UNIFIED PRODUCT (optional, future use)
+//  UNIFIED PRODUCT
 // ─────────────────────────────────────────────
-
-// This is the final normalized type if you choose to merge search + details
 export interface UnifiedProduct {
   asin: string;
   title: string;

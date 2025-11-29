@@ -1,9 +1,5 @@
 import { Star } from "lucide-react";
-
-interface ProductRatingProps {
-  rating: number;
-  reviewCount: number;
-}
+import { ProductRatingProps } from "@/interfaces";
 
 export function ProductRating({ rating, reviewCount }: ProductRatingProps) {
   return (

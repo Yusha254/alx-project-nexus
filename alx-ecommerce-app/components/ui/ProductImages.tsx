@@ -1,13 +1,9 @@
+"use client";
+
 import { useState } from "react";
 import { Zap } from "lucide-react";
 import { ImageWithFallback } from "@/components/ui/ImageWithFallback";
-
-interface ProductImagesProps {
-  images: string[];
-  discount?: number;
-  isPrime?: boolean;
-  title: string;
-}
+import { ProductImagesProps } from "@/interfaces";
 
 export function ProductImages({ images, discount = 0, isPrime = false, title }: ProductImagesProps) {
   const [selectedImage, setSelectedImage] = useState(0);

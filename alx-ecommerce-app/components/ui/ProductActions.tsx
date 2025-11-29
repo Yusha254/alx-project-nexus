@@ -1,13 +1,8 @@
+"use client";
+
 import { useState } from "react";
 import { ShoppingCart, Heart, Share2 } from "lucide-react";
-
-interface ProductActionsProps {
-  price: number;
-  originalPrice?: number;
-  discount?: number;
-  inStock?: boolean;
-  onAddToCart: (quantity: number) => void;
-}
+import { ProductActionsProps } from "@/interfaces";
 
 export function ProductActions({ price, originalPrice, discount, inStock = true, onAddToCart }: ProductActionsProps) {
   const [quantity, setQuantity] = useState(1);

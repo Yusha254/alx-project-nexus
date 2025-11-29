@@ -2,13 +2,15 @@
 
 import { Search, ShoppingCart, Menu } from "lucide-react";
 import { HeaderProps } from "@/interfaces";
+import { useCart } from "@/context/CartContext";
 
 export function Header({
-  cartItemCount,
   onCartClick,
   searchQuery,
   onSearchChange,
 }: HeaderProps) {
+  const { totalCount } = useCart();
+
   return (
     <header className="bg-white border-b border-neutral-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -46,9 +48,9 @@ export function Header({
           >
             <ShoppingCart className="w-6 h-6 text-neutral-700" />
 
-            {cartItemCount > 0 && (
+            {totalCount > 0 && (
               <span className="absolute -top-1 -right-1 bg-neutral-900 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
-                {cartItemCount}
+                {totalCount}
               </span>
             )}
           </button>
