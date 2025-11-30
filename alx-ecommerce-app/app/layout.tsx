@@ -23,8 +23,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <RootContent
                 isCartOpen={isCartOpen}
                 setIsCartOpen={setIsCartOpen}
-                searchQuery={searchQuery}
-                setSearchQuery={setSearchQuery}
               >
                 {children}
               </RootContent>
@@ -43,13 +41,9 @@ function RootContent({
   children,
   isCartOpen,
   setIsCartOpen,
-  searchQuery,
-  setSearchQuery,
 }: {
   children: React.ReactNode;
   isCartOpen: boolean;
-  searchQuery: string;
-  setSearchQuery: (v: string) => void;
   setIsCartOpen: (v: boolean) => void;
 }) {
   const { items, updateQuantity } = useCart();
@@ -61,8 +55,6 @@ function RootContent({
       <Header
         cartItemCount={items.reduce((sum, i) => sum + i.quantity, 0)}
         onCartClick={() => setIsCartOpen(true)}
-        searchQuery={searchQuery}
-        onSearchChange={setSearchQuery}
       />
 
       <Cart

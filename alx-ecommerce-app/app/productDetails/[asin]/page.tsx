@@ -4,21 +4,17 @@ import type { UnifiedProduct, ProductDetailsPageProps } from "@/interfaces";
 import { useProductDetails } from "@/hooks/useQuery";
 import { redirect, useRouter } from "next/navigation";
 
-export default async function ProductDetailsPage(props: ProductDetailsPageProps) {
-  const params = await props.params;
-  const { asin } = params;
-  const { data, isLoading, error } = useProductDetails(asin as string);
+export default function ProductDetailsPage(props: ProductDetailsPageProps) {
+  const resolvedParams = props.params as { asin: string };
+  const { asin } = resolvedParams;
+  const { data: product, isLoading, error } = useProductDetails(asin as string);
   const router = useRouter();
 
-  let product: UnifiedProduct | null = null;
-
-  if (isLoading) return <p>Loading...</p>;
-  if (error || !data) {
+  if (isLoading) return <p>Loading product details...</p>;
+  if (error || !product) {
+    console.error("Failed to load product details or product not found:", error);
     router.push("/");
     return null;
-  }
-  if (!product) {
-    redirect("/");
   }
 
   return (

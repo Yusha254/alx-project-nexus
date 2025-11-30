@@ -3,13 +3,13 @@
 import { Search, ShoppingCart, Menu } from "lucide-react";
 import { HeaderProps } from "@/interfaces";
 import { useCart } from "@/context/CartContext";
+import { useSearch } from "@/context/SearchContext";
 
 export function Header({
   onCartClick,
-  searchQuery,
-  onSearchChange,
 }: HeaderProps) {
   const { totalCount } = useCart();
+  const { searchQuery, setSearchQuery } = useSearch();
 
   return (
     <header className="bg-white border-b border-neutral-200 sticky top-0 z-50">
@@ -35,7 +35,7 @@ export function Header({
                 type="text"
                 placeholder="Search products..."
                 value={searchQuery}
-                onChange={(e) => onSearchChange(e.target.value)}
+                onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-12 pr-4 py-2.5 bg-neutral-50 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent transition-all"
               />
             </div>
@@ -65,7 +65,7 @@ export function Header({
               type="text"
               placeholder="Search products..."
               value={searchQuery}
-              onChange={(e) => onSearchChange(e.target.value)}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-12 pr-4 py-2.5 bg-neutral-50 border border-neutral-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-neutral-900 focus:border-transparent"
             />
           </div>

@@ -12,9 +12,10 @@ const client = axios.create({
   },
 });
 
-export async function fetchProducts(query: string = "Phone", page = 1) {
+export async function fetchProducts(query: string = "Phone", page = 2) {
+  const effectiveQuery = query.trim() === "" ? "Electronics" : query;
   const res = await client.get("/search", {
-    params: { query, page, country: "US", sort_by: "RELEVANCE" },
+    params: { query: effectiveQuery, page, country: "US", sort_by: "RELEVANCE" },
   });
 
   const items = res.data?.data?.products ?? [];

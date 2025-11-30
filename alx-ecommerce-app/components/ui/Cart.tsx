@@ -55,7 +55,7 @@ export function Cart({ isOpen, onClose, items, onUpdateQuantity }: CartProps) {
             <div className="flex-1 overflow-y-auto p-6 space-y-4">
               {items.map((item) => (
                 <div key={item.asin} className="flex gap-4 bg-neutral-50 rounded-lg p-4">
-                  <div className="w-24 h-24 rounded-lg overflow-hidden bg-white flex-shrink-0">
+                  <div className="w-24 h-24 rounded-lg overflow-hidden bg-white shrink-0">
                     <ImageWithFallback
                       src={item.image??''}
                       alt={item.title}

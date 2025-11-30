@@ -3,8 +3,9 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import type { UnifiedProduct } from "@/interfaces";
-import { useProducts } from "@/hooks/useQuery";
+import { useInfiniteProducts } from "@/hooks/useQuery"; 
 import { useCart } from "@/context/CartContext";
+import { useSearch } from "@/context/SearchContext"; 
 
 import Hero from "@/components/common/Hero";
 import { ProductGrid } from "@/components/common/ProductGrid";
@@ -12,9 +13,48 @@ import { Filters } from "@/components/common/Filters";
 import { CategoryNav } from "@/components/common/CategoryNav";
 import { Pagination } from "@/components/ui/Pagination";
 
-export default function Home({ searchQuery }: { searchQuery: string }) {
+export default function Home() { 
   const router = useRouter();
   const { addItem } = useCart();
+  
+  // -------------------------------------------------------
+  // SEARCH CONTEXT
+  // -------------------------------------------------------
+  const { 
+    searchQuery, 
+    searchResults, 
+    isLoading: isSearchLoading,
+    isError: isSearchError,
+  } = useSearch();
+
+  // -------------------------------------------------------
+  // DEFAULT PRODUCT FETCHING (Used when searchQuery is empty)
+  // -------------------------------------------------------
+  const isSearchActive = !!searchQuery;
+  const { 
+    data: infiniteData, // Data is an object with a 'pages' array
+    fetchNextPage, // Function to load the next API page
+    hasNextPage, // Boolean from React Query
+    isFetchingNextPage, // Loading state specific to the next page
+    isLoading: isDefaultLoading,
+    isError: isDefaultError,
+  } = useInfiniteProducts("", !isSearchActive);
+
+  const defaultProducts = infiniteData?.pages?.flatMap(page => page) ?? [];
+
+  // -------------------------------------------------------
+  // DETERMINE THE ACTIVE PRODUCT LIST
+  // -------------------------------------------------------
+  const productsToDisplay = isSearchActive ? searchResults : defaultProducts;
+  const isLoading = isSearchActive 
+    ? isSearchLoading 
+    : (isDefaultLoading || isFetchingNextPage); // Use isFetchingNextPage for loading indication
+
+  const isError = isSearchActive ? isSearchError : isDefaultError;
+
+  // -------------------------------------------------------
+  // FILTERS/SORT/PAGINATION STATE (Your existing state)
+  // -------------------------------------------------------
   const [selectedCategory, setSelectedCategory] = useState<string | undefined>();
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 200]);
   const [sortBy, setSortBy] = useState("featured");
@@ -22,22 +62,24 @@ export default function Home({ searchQuery }: { searchQuery: string }) {
   const [currentPage, setCurrentPage] = useState(1);
   const PAGE_SIZE = 20;
 
-  const { data: products = [] } = useProducts(searchQuery);
-
   // -------------------------------------------------------
-  // FILTER + SORT
+  // FILTER + SORT LOGIC
   // -------------------------------------------------------
-  const filteredProducts = products
+  const filteredProducts = (productsToDisplay ?? []) // Use productsToDisplay
     .filter((p) => {
+      // Keep category filter
       if (!selectedCategory) return true;
       return p.title?.toLowerCase().includes(selectedCategory);
     })
-    .filter((p) => p.title?.toLowerCase().includes((searchQuery ?? "").toLowerCase()))
+    // ⚠️ Remove this filter! The API/search context now handles the search query.
+    // .filter((p) => p.title?.toLowerCase().includes((searchQuery ?? "").toLowerCase())) 
     .filter((p) => {
+      // Keep price filter
       const price = Number(p.price) || 0;
       return price >= priceRange[0] && price <= priceRange[1];
     })
     .sort((a, b) => {
+      // Keep sort logic
       switch (sortBy) {
         case "price-low":
           return (Number(a.price) || 0) - (Number(b.price) || 0);
@@ -63,19 +105,31 @@ export default function Home({ searchQuery }: { searchQuery: string }) {
   );
 
   useEffect(() => {
-    setCurrentPage(1);
-  }, [priceRange, sortBy, selectedCategory]);
+    const isFetchingNewData = isDefaultLoading || isFetchingNextPage;
+
+    if (
+        !isSearchActive && 
+        currentPage === totalPages &&
+        hasNextPage &&
+        !isFetchingNewData &&
+        paginatedProducts.length < PAGE_SIZE 
+    ) {
+        console.log("Reached end of loaded data. Fetching next API page...");
+        fetchNextPage();
+    }
+    // reset current page when filters/search changes
+    if (currentPage !== 1 && (priceRange || sortBy || selectedCategory || searchQuery)) {
+        setCurrentPage(1);
+    }
+  }, [currentPage, totalPages, isSearchActive, hasNextPage, isFetchingNextPage, fetchNextPage, paginatedProducts.length, PAGE_SIZE, priceRange, sortBy, selectedCategory, searchQuery]);
 
   // -------------------------------------------------------
-  // Navigation
+  // Navigation & Cart
   // -------------------------------------------------------
   const handleProductClick = async (product: UnifiedProduct) => {
     router.push(`/productDetails/${product.asin}`);
   };
 
-  // -------------------------------------------------------
-  // Cart
-  // -------------------------------------------------------
   const handleAddToCart = (product: UnifiedProduct) => {
     addItem(product);
   };
@@ -83,6 +137,18 @@ export default function Home({ searchQuery }: { searchQuery: string }) {
   const handleCategorySelect = (categoryId: string) => {
     setSelectedCategory(categoryId);
   };
+
+  // -------------------------------------------------------
+  // RENDER LOGIC
+  // -------------------------------------------------------
+
+  if (isError) {
+      return (
+          <div className="text-center py-20 text-red-600">
+              Failed to load products. Please check your network or API key.
+          </div>
+      );
+  }
 
   return (
     <div className="min-h-screen bg-neutral-50">
@@ -94,10 +160,13 @@ export default function Home({ searchQuery }: { searchQuery: string }) {
         }
       />
 
-      <CategoryNav
-        selectedCategory={selectedCategory}
-        onCategorySelect={handleCategorySelect}
-      />
+      {/* Hide category nav if a search query is active and we want search results only */}
+      {!isSearchActive && (
+        <CategoryNav
+          selectedCategory={selectedCategory}
+          onCategorySelect={handleCategorySelect}
+        />
+      )}
 
       <div
         id="products-section"
@@ -114,11 +183,12 @@ export default function Home({ searchQuery }: { searchQuery: string }) {
 
         <main className="flex-1">
           <div className="mb-6">
-            <h1 className="text-neutral-900 mb-2">All Products</h1>
+            <h1 className="text-neutral-900 mb-2">
+              {isSearchActive ? "Search Results" : "All Products"}
+            </h1>
             <p className="text-neutral-600">
-              {filteredProducts.length}{" "}
-              {filteredProducts.length === 1 ? "result" : "results"}
-              {searchQuery && ` for "${searchQuery}"`}
+              {isLoading ? "Loading..." : `${filteredProducts.length} ${filteredProducts.length === 1 ? "result" : "results"}`}
+              {isSearchActive && ` for "${searchQuery}"`}
             </p>
           </div>
 
@@ -126,14 +196,24 @@ export default function Home({ searchQuery }: { searchQuery: string }) {
             products={paginatedProducts}
             onProductClick={handleProductClick}
             onAddToCart={handleAddToCart}
-            loading={false}
+            loading={isLoading}
           />
+          
+          {/* Show no results message */}
+          {!isLoading && filteredProducts.length === 0 && (
+            <div className="text-center py-10 text-gray-500">
+                No products found matching your criteria.
+            </div>
+          )}
 
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={setCurrentPage}
-          />
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={setCurrentPage}
+            />
+          )}
         </main>
       </div>
     </div>
