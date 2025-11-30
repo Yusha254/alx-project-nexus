@@ -19,19 +19,13 @@ export default function ProductDetailsClient({ asin }: ProductDetailsClientProps
     
     const router = useRouter();
 
-    // -------------------------------------------------------------------
-    // RENDER FLOW
-    // -------------------------------------------------------------------
-
     if (isLoading) {
         return <p>Loading product details...</p>;
     }
     
-    // After loading is complete (isLoading is false), check for failure/missing data.
     if (error || !product) { 
         console.error("Failed to load product details or product not found:", error);
         
-        // This redirect prevents infinite loops when data is truly missing
         router.push("/");
         return null;
     }
