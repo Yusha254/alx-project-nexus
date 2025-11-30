@@ -27,5 +27,11 @@ export async function fetchProductDetails(asin: string) {
     params: { asin, country: "US" },
   });
 
-  return normalizeProductDetail(res.data?.data);
+  const rawData = res.data?.data;
+
+  if (!rawData) {
+    throw new Error(`Product with ASIN ${asin} not found.`);
+  }
+
+  return normalizeProductDetail(rawData);
 }

@@ -71,10 +71,7 @@ export default function Home() {
       if (!selectedCategory) return true;
       return p.title?.toLowerCase().includes(selectedCategory);
     })
-    // ⚠️ Remove this filter! The API/search context now handles the search query.
-    // .filter((p) => p.title?.toLowerCase().includes((searchQuery ?? "").toLowerCase())) 
     .filter((p) => {
-      // Keep price filter
       const price = Number(p.price) || 0;
       return price >= priceRange[0] && price <= priceRange[1];
     })
