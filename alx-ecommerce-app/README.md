@@ -18,16 +18,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔑 API Key Setup
 
-## Learn More
+This application relies on the Real-Time Amazon Data API from RapidAPI to fetch product information. To enable data fetching, you must configure your API key locally.
+1. Obtain Key: Get your personal API key by subscribing (free tier available) to the service [here.](https://rapidapi.com/letscrape-6bRBa3QguO5/api/real-time-amazon-data/playground)
+2. Locate or Create File: Find or locate the .env.local file in the root directory.
+3. Configure: Replace the placeholder with your copied key:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+NEXT_PUBLIC_RAPIDAPI_KEY=PASTE_API_KEY_HERE
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Note: The .env.local file is automatically excluded from Git, keeping your private key secure.
 
 ## Deploy on Vercel
 
